@@ -24,6 +24,9 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Example Guide", slug: "guides/example" },
+            { label: "Status Indicators", slug: "guides/status-indicators" },
+            { label: "Dynamic Theming", slug: "guides/dynamic-theming" },
+            { label: "More guides", slug: "guides/more-guides" },
           ],
         },
         {
