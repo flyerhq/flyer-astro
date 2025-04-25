@@ -1,5 +1,9 @@
 ---
-const { title = "My Astro Website", ...props } = Astro.props;
+interface Props {
+  title: string;
+}
+
+const { title = "My Astro Website" } = Astro.props;
 ---
 
 <link rel="sitemap" href="/sitemap-index.xml" />
