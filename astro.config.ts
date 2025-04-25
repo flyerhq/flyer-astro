@@ -1,11 +1,31 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.google(),
+        name: "Host Grotesk",
+        cssVariable: "--font-header1",
+      },
+      {
+        provider: fontProviders.google(),
+        name: "Inter",
+        cssVariable: "--font-body1",
+      },
+      {
+        provider: fontProviders.google(),
+        name: "IBM Plex Mono",
+        cssVariable: "--font-body2",
+        weights: [400, 500],
+      },
+    ],
+  },
   site: "https://flyer.chat",
   trailingSlash: "ignore",
   integrations: [
