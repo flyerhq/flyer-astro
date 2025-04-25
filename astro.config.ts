@@ -7,8 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://flyer.chat",
-  base: "/docs",
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   integrations: [
     starlight({
       title: "Flyer Chat",
