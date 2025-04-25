@@ -2,11 +2,20 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+import tailwindcss from "@tailwindcss/vite";
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://flyer.chat",
+  base: "/docs",
+  trailingSlash: "never",
   integrations: [
     starlight({
       title: "Flyer Chat",
+      customCss: [
+        // Path to your Tailwind base styles:
+        "./src/styles/global.css",
+      ],
       social: [
         { icon: "github", label: "GitHub", href: "https://github.com/flyerhq" },
       ],
@@ -25,4 +34,7 @@ export default defineConfig({
       ],
     }),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
