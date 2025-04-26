@@ -1,14 +1,16 @@
+---
+const title = "Ship faster with a go-to chat SDK";
+const description =
+  "Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.";
+---
+
 <head>
   <meta charset="UTF-8" />
   <meta name="robots" content="index, follow" />
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.
-    "
-  />
+  <meta name="description" content={description} />
   <meta
     name="keywords"
     content="chat, development, open-source, react native, flutter, saas, firebase"
@@ -22,17 +24,26 @@
   <!-- Open Graph tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://www.flyer.chat" />
-  <meta property="og:title" content="Ship faster with a go-to chat SDK" />
-  <meta
-    property="og:description"
-    content="Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.
-    "
-  />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta
     property="og:image"
-    content="https://user-images.githubusercontent.com/14123304/112752346-fae2be00-8fd2-11eb-848f-68b7b3cffff9.png"
+    content="https://raw.githubusercontent.com/flyerhq/flyer-astro/refs/heads/main/public/og-image.png?token=GHSAT0AAAAAAC7XZ4IVZYAYLSSZA6H3OFJ22ANIF7Q"
   />
   <meta property="og:image:alt" content="" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:site" content="@http://flyer.chat" />
+  <meta
+    name="twitter:description"
+    content="Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI"
+  />
+  <meta
+    name="twitter:image"
+    content="https://raw.githubusercontent.com/flyerhq/flyer-astro/refs/heads/main/public/summary_large_image.png?token=GHSAT0AAAAAAC7XZ4IV4EHTJJGZYRZUJ26Q2ANIKFA"
+  />
 
   <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> -->
@@ -40,5 +51,5 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f61e8" />
 
-  <title>Flyer Chat | Ship faster with a go-to chat SDK</title>
+  <title>Flyer Chat | {title}</title>
 </head>
