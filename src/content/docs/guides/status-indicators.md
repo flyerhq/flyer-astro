@@ -6,17 +6,16 @@ This guide explains how Flyer Chat handles and displays message status indicator
 
 ## How Status Works
 
-Instead of a single `status` field (like an enum), Flyer Chat determines the message status based on a combination of nullable `DateTime?` fields and a `bool` flag on the `Message` object. This approach offers more granular control and flexibility.
+Instead of a single `status` field (like an enum), Flyer Chat determines the message status based on a combination of nullable `DateTime?` fields and an optional `bool sending` flag in the `Message`'s metadata map. This approach offers more granular control and flexibility.
 
 The key fields involved are:
-*   `bool sending`: Indicates the message is currently being sent.
 *   `DateTime? failedAt`: Timestamp when the message failed to send.
 *   `DateTime? sentAt`: Timestamp when the message was successfully sent from the device.
 *   `DateTime? deliveredAt`: Timestamp when the message was delivered to the recipient(s).
 *   `DateTime? seenAt`: Timestamp when the message was seen/read by the recipient(s).
 
 The `Chat` widget automatically displays the appropriate visual indicator based on which of these fields are set (and their order of precedence):
-*   `sending == true`: Shows a **sending spinner** ⏳.
+*   `metadata?['sending'] == true`: Shows a **sending spinner** ⏳.
 *   `failedAt != null`: Shows an **error icon** ❗.
 *   `seenAt != null`: Shows a **double tick** (read indicator) ✔️✔️.
 *   `deliveredAt != null`: Shows a **single tick** (delivered indicator) ✔️.

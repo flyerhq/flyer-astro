@@ -42,12 +42,12 @@ export default defineConfig({
           slug: "introduction",
         },
         {
-          label: "Getting started",
+          label: "Getting Started",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Simple example", slug: "getting-started/simple-example" },
+            { label: "Simple Example", slug: "getting-started/simple-example" },
             {
-              label: "Flyer Chat architecture",
+              label: "Flyer Chat Architecture",
               slug: "getting-started/architecture",
             },
             { label: "Customisation", slug: "getting-started/customisation" },
@@ -58,9 +58,9 @@ export default defineConfig({
           label: "Guides",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Status indicators", slug: "guides/status-indicators" },
-            { label: "Dynamic theming", slug: "guides/dynamic-theming" },
-            { label: "More guides", slug: "guides/more-guides" },
+            { label: "Status Indicators", slug: "guides/status-indicators" },
+            { label: "Dynamic Theming", slug: "guides/dynamic-theming" },
+            { label: "More Guides", slug: "guides/more-guides" },
           ],
         },
       ],

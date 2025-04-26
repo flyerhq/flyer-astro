@@ -1,6 +1,5 @@
 ---
 title: Dynamic Theming 🎨
-description: This guide explains how to handle light/dark modes and customize the visual appearance of Flyer Chat using its theming system.
 ---
 
 This guide explains how to handle light/dark modes and customize the visual appearance of Flyer Chat using its theming system.

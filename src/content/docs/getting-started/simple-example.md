@@ -6,9 +6,9 @@ This section demonstrates the simplest possible setup for Flyer Chat using the c
 
 1.  **`chatController`**: This manages the messages displayed in the chat. For this basic example, we'll use the provided `InMemoryChatController`.
     *   `InMemoryChatController` is easy to use but it **does not save messages** when the app closes or restarts.
-    *   For persistent storage across sessions, you would create your own controller implementation (see the [Architecture](./architecture.md) section or the example project for details).
-2.  **`currentUserId` (`String`)**: The ID of the currently logged-in user (who will be the author of messages sent via the composer).
-3.  **`resolveUser` (`Future<User> Function(String id)`)**: An asynchronous function that takes a user ID and must return the corresponding `User` object. Flyer Chat uses user IDs internally and calls this function whenever it needs the full user data (e.g., for displaying name or avatar), caching the results in memory.
+    *   For persistent storage across sessions, you would create your own controller implementation (see the [Architecture](../architecture) section or the example project for details).
+2.  **`currentUserId` (`UserID`)**: The ID of the currently logged-in user (who will be the author of messages sent via the composer).
+3.  **`resolveUser` (`Future<User> Function(UserID id)`)**: An asynchronous function that takes a user ID and must return the corresponding `User` object. Flyer Chat uses user IDs internally and calls this function whenever it needs the full user data (e.g., for displaying name or avatar), caching the results in memory.
 
 The following code snippet shows how to combine these elements for a minimal, functioning chat interface.
 
@@ -52,7 +52,7 @@ class MyChatState extends State<MyChat> {
             ),
           );
         },
-        resolveUser: (String id) async {
+        resolveUser: (UserID id) async {
           return User(id: id, firstName: 'John', lastName: 'Doe');
         },
       ),
