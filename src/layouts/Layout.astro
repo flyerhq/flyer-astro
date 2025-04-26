@@ -1,6 +1,8 @@
 ---
 import Head from "@components/Head.astro";
+import Navbar from "@components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+
 import "@styles/global.css";
 
 type Props = { children: any };
@@ -14,8 +16,11 @@ type Props = { children: any };
     <meta name="generator" content={Astro.generator} />
     <Head title="Astro" />
   </head>
-  <body>
-    <slot />
+  <body class="flex flex-col h-screen bg-surface">
+    <Navbar />
+    <div class="flex flex-col grow container">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

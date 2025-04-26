@@ -1,27 +1,17 @@
 ---
-import { Font } from "astro:assets";
-
 interface Props {
   title: string;
 }
 
-const { title = "My Astro Website" } = Astro.props;
+const { title = "Flyer Chat" } = Astro.props;
 ---
 
 <link rel="sitemap" href="/sitemap-index.xml" />
-
-<Font cssVariable="--font-header1" preload />
-<Font cssVariable="--font-body1" preload />
-<Font cssVariable="--font-body2" preload />
 
 <title>{title}</title>
 <meta name="description" content="Welcome to my new Astro site!" />
 
 <!-- Web analytics -->
-<script
-  data-goatcounter="https://my-account.goatcounter.com/count"
-  async
-  src="//gc.zgo.at/count.js"></script>
 
 <!-- Open Graph tags -->
 <meta property="og:title" content="My New Astro Website" />

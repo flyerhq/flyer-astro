@@ -1,0 +1,26 @@
+---
+import Body1 from "./Body1.astro";
+import Button from "./Button.astro";
+import Header1 from "./Header1.astro";
+---
+
+<main class="flex flex-col items-center justify-center flex-1 container">
+  <div class="flex flex-col md:items-center flex-1 justify-center w-full">
+    <div class="md:w-[740px]">
+      <Header1 class="text-left md:text-center">
+        Ship faster with go-to chat SDK
+      </Header1>
+    </div>
+    <div class="md:w-[540px] mt-8">
+      <Body1 class="text-left md:text-center">
+        Focus on innovation instead of added complexity with a flexible chat
+        experience that scales across platforms.
+      </Body1>
+    </div>
+    <Button
+      href="https://github.com/flyerhq"
+      target="_blank"
+      class="w-full md:w-[400px] mt-10">github docs</Button
+    >
+  </div>
+</main>
