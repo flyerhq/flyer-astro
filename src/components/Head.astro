@@ -1,25 +1,44 @@
----
-interface Props {
-  title: string;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.
+    "
+  />
+  <meta
+    name="keywords"
+    content="chat, development, open-source, react native, flutter, saas, firebase"
+  />
 
-const { title = "Flyer Chat" } = Astro.props;
----
+  <meta name="apple-mobile-web-app-title" content="Flyer Chat" />
+  <meta name="application-name" content="Flyer Chat" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="generator" content={Astro.generator} />
 
-<link rel="sitemap" href="/sitemap-index.xml" />
+  <!-- Open Graph tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.flyer.chat" />
+  <meta property="og:title" content="Ship faster with a go-to chat SDK" />
+  <meta
+    property="og:description"
+    content="Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.
+    "
+  />
+  <meta
+    property="og:image"
+    content="https://user-images.githubusercontent.com/14123304/112752346-fae2be00-8fd2-11eb-848f-68b7b3cffff9.png"
+  />
+  <meta property="og:image:alt" content="" />
 
-<title>{title}</title>
-<meta name="description" content="Welcome to my new Astro site!" />
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f61e8" />
 
-<!-- Web analytics -->
-
-<!-- Open Graph tags -->
-<meta property="og:title" content="My New Astro Website" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.example.com/" />
-<meta property="og:description" content="Welcome to my new Astro site!" />
-<meta
-  property="og:image"
-  content="https://www.example.com/_astro/seo-banner.BZD7kegZ.webp"
-/>
-<meta property="og:image:alt" content="" />
+  <title>Flyer Chat | Ship faster with a go-to chat SDK</title>
+</head>
