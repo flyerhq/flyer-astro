@@ -1,10 +1,133 @@
 @layer base, starlight, theme, components, utilities;
 
+@import "./reset.css" layer(base);
 @import "@astrojs/starlight-tailwind";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@import "@fontsource-variable/host-grotesk";
+@import "@fontsource-variable/inter";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
 @theme inline {
-  --font-sans: var(--font-body1);
-  --font-mono: var(--font-body2);
+  --font-sans: "Inter Variable", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-header1: "Host Grotesk Variable", sans-serif;
+  --font-body1: var(--font-sans);
+  --font-body2: var(--font-mono);
+
+  --color-primary: #f0ff94;
+  --color-text-primary: #272727;
+  --color-text-on-primary: #ffffff;
+  --color-surface: #f2f2f2;
+
+  --color-jonquil-50: #fdffe5;
+  --color-jonquil-100: #f8ffc8;
+  --color-jonquil-200: #f0ff94;
+  --color-jonquil-300: #e1fb5b;
+  --color-jonquil-400: #d0f229;
+  --color-jonquil-500: #b1d80a;
+  --color-jonquil-600: #8aad03;
+  --color-jonquil-700: #688308;
+  --color-jonquil-800: #53670d;
+  --color-jonquil-900: #455710;
+  --color-jonquil-950: #243102;
+
+  --color-shark-50: #f2f2f2;
+  --color-shark-100: #e3e3e3;
+  --color-shark-200: #c9c9c9;
+  --color-shark-300: #adadad;
+  --color-shark-400: #949494;
+  --color-shark-500: #787878;
+  --color-shark-600: #5c5c5c;
+  --color-shark-700: #424242;
+  --color-shark-800: #272727;
+  --color-shark-900: #141414;
+  --color-shark-950: #0a0a0a;
+
+  /* accent */
+  --color-accent-50: var(--color-jonquil-50);
+  --color-accent-100: var(--color-jonquil-100);
+  --color-accent-200: var(--color-jonquil-200);
+  --color-accent-300: var(--color-jonquil-300);
+  --color-accent-400: var(--color-jonquil-400);
+  --color-accent-500: var(--color-jonquil-500);
+  --color-accent-600: var(--color-jonquil-600);
+  --color-accent-700: var(--color-jonquil-700);
+  --color-accent-800: var(--color-jonquil-800);
+  --color-accent-900: var(--color-jonquil-900);
+  --color-accent-950: var(--color-jonquil-950);
+
+  /* Your preferred gray scale. Zinc is closest to Starlight’s defaults. */
+  --color-gray-50: var(--color-shark-50);
+  --color-gray-100: var(--color-shark-100);
+  --color-gray-200: var(--color-shark-200);
+  --color-gray-300: var(--color-shark-300);
+  --color-gray-400: var(--color-shark-400);
+  --color-gray-500: var(--color-shark-500);
+  --color-gray-600: var(--color-shark-600);
+  --color-gray-700: var(--color-shark-700);
+  --color-gray-800: var(--color-shark-800);
+  --color-gray-900: var(--color-shark-900);
+  --color-gray-950: var(--color-shark-950);
+}
+
+.group-label span {
+  font-family: "Host Grotesk Variable";
+}
+
+.main-pane h1,
+.main-pane h2,
+.main-pane h3,
+.main-pane h4,
+.main-pane h5,
+.main-pane h6 {
+  font-family: "Host Grotesk Variable";
+}
+
+.right-sidebar h1,
+.right-sidebar h2,
+.right-sidebar h3,
+.right-sidebar h4,
+.right-sidebar h5,
+.right-sidebar h6 {
+  font-family: "Host Grotesk Variable";
+}
+
+.starlight-aside__title {
+  font-family: "Host Grotesk Variable";
+}
+
+.link-title {
+  font-family: "Host Grotesk Variable";
+}
+
+.site-title {
+  font-family: "Host Grotesk Variable";
+  font-weight: 900;
+  color: light-dark(black, white);
+}
+
+.site-title img {
+  height: 32px;
+  width: 32px;
+}
+
+::selection {
+  @apply bg-primary/50 leading-tight;
+}
+
+html,
+body {
+  @apply bg-surface dark:bg-shark-900 font-body1 text-text-primary dark:text-shark-100;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
 }
