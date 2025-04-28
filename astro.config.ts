@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
 
 import tailwindcss from "@tailwindcss/vite";
+import { sidebar } from "./astro.sidebar";
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,34 +37,7 @@ export default defineConfig({
       social: [
         { icon: "github", label: "GitHub", href: "https://github.com/flyerhq" },
       ],
-      sidebar: [
-        {
-          label: "Introduction",
-          slug: "introduction",
-        },
-        {
-          label: "Getting Started",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Simple Example", slug: "getting-started/simple-example" },
-            {
-              label: "Flyer Chat Architecture",
-              slug: "getting-started/architecture",
-            },
-            { label: "Customisation", slug: "getting-started/customisation" },
-            { label: "Migration from V1", slug: "getting-started/migration" },
-          ],
-        },
-        {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Status Indicators", slug: "guides/status-indicators" },
-            { label: "Dynamic Theming", slug: "guides/dynamic-theming" },
-            { label: "More Guides", slug: "guides/more-guides" },
-          ],
-        },
-      ],
+      sidebar: sidebar,
       favicon: "/favicon.ico",
     }),
   ],
