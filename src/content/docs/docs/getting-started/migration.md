@@ -37,7 +37,7 @@ While this won't cover every difference, understanding these core changes is the
 
 ## `Chat` Widget Parameter Changes
 
-*   **`messages`**: Replaced by the required `chatController` parameter. See the [Architecture](../architecture) section for details on controller.
+*   **`messages`**: Replaced by the required `chatController` parameter. See the [Architecture](/docs/getting-started/architecture) section for details on controller.
 *   **`onSendPressed`**: No longer exists. The alternative is the optional `onMessageSent` callback.
 *   **`user`**: Replaced by two required parameters:
     *   `currentUserId` (`UserID`): The ID of the currently logged-in user (equivalent to v1's `user.id`).
