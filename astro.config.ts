@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import react from "@astrojs/react";
+import starlightLinksValidator from "starlight-links-validator";
 
 import tailwindcss from "@tailwindcss/vite";
 import { sidebar } from "./astro.sidebar";
@@ -21,6 +22,7 @@ export default defineConfig({
   integrations: [
     react(),
     starlight({
+      plugins: [starlightLinksValidator()],
       title: "Flyer Chat",
       customCss: [
         // Path to your Tailwind base styles:
