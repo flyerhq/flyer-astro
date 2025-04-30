@@ -6,7 +6,7 @@ This section demonstrates the simplest possible setup for Flyer Chat using the c
 
 1.  **`chatController`**: This manages the messages displayed in the chat. For this basic example, we'll use the provided `InMemoryChatController`.
     *   `InMemoryChatController` is easy to use but it **does not save messages** when the app closes or restarts.
-    *   For persistent storage across sessions, you would create your own controller implementation (see the [Architecture](/docs/getting-started/architecture) section or the example project for details).
+    *   For persistent storage across sessions, you would create your own controller implementation (see the [Architecture](/docs/flutter/getting-started/architecture) section or the example project for details).
 2.  **`currentUserId` (`UserID`)**: The ID of the currently logged-in user (who will be the author of messages sent via the composer).
 3.  **`resolveUser` (`Future<User> Function(UserID id)`)**: An asynchronous function that takes a user ID and must return the corresponding `User` object. Flyer Chat uses user IDs internally and calls this function whenever it needs the full user data (e.g., for displaying name or avatar), caching the results in memory.
 
