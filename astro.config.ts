@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import starlightLlmsTxt from "starlight-llms-txt";
 import starlightLinksValidator from "starlight-links-validator";
@@ -22,6 +23,7 @@ export default defineConfig({
   trailingSlash: "ignore",
   integrations: [
     react(),
+    sitemap(),
     starlight({
       plugins: [starlightLinksValidator(), starlightLlmsTxt()],
       title: "Flyer Chat",
@@ -42,6 +44,9 @@ export default defineConfig({
       ],
       sidebar: sidebar,
       favicon: "/favicon.ico",
+      editLink: {
+        baseUrl: "https://github.com/flyerhq/flyer-astro/tree/main",
+      },
     }),
   ],
   vite: {
