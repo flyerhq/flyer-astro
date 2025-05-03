@@ -17,6 +17,10 @@ const { showIsCookingBanner } = Astro.props;
         className="bg-primary text-[24px] leading-tight h-16 items-center font-medium select-none"
       >
         <span class="mr-2">{copy}</span>
+        <div
+          slot="fallback"
+          class="flex bg-primary text-[24px] leading-tight h-16 font-medium select-none"
+        />
       </Marquee>
     ) : null
   }
