@@ -2,18 +2,23 @@
 import Marquee from "react-fast-marquee";
 import Header from "./Header.astro";
 
+type Props = { showIsCookingBanner: boolean };
+
 const copy = "🔥 The page is cooking ";
+const { showIsCookingBanner } = Astro.props;
 ---
 
 <div>
-  <Marquee
-    client:only
-    autoFill
-    className="bg-primary text-[24px] leading-tight h-16 items-center font-medium select-none"
-  >
-    <span class="mr-2">
-      {copy}
-    </span>
-  </Marquee>
+  {
+    showIsCookingBanner ? (
+      <Marquee
+        client:only
+        autoFill
+        className="bg-primary text-[24px] leading-tight h-16 items-center font-medium select-none"
+      >
+        <span class="mr-2">{copy}</span>
+      </Marquee>
+    ) : null
+  }
   <Header />
 </div>
