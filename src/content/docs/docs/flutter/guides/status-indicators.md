@@ -48,7 +48,7 @@ These parameters give you flexibility in integrating the status display with you
 **Example 1: Show a single tick for every message**
 
 ```dart
-_chatController.insert(
+_chatController.insertMessage(
   TextMessage(
     // Better to use UUID or similar for the ID - IDs must be unique.
     id: '${Random().nextInt(1000) + 1}',
