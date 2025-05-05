@@ -16,17 +16,20 @@ const seoSchema = z.object({
   pageType: z.enum(["website", "article"]).default("website"),
 });
 
+const blogSchema = z.object({
+  title: z.string(),
+  excerpt: z.string().optional(),
+  publishDate: z.coerce.date(),
+  updatedDate: z.coerce.date().optional(),
+  isFeatured: z.boolean().default(false),
+  tags: z.array(z.string()).default([]),
+  seo: seoSchema.optional(),
+  draft: z.boolean().optional(),
+});
+
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
-  schema: z.object({
-    title: z.string(),
-    excerpt: z.string().optional(),
-    publishDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    isFeatured: z.boolean().default(false),
-    tags: z.array(z.string()).default([]),
-    seo: seoSchema.optional(),
-  }),
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/blog" }),
+  schema: blogSchema,
 });
 
 const docs = defineCollection({ loader: docsLoader(), schema: docsSchema() });
