@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 const title = "Ship faster with a go-to chat SDK";
 const description =
   "Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.";
@@ -46,4 +48,6 @@ const description =
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f61e8" />
 
   <title>Flyer Chat | {title}</title>
+
+  <ClientRouter fallback="swap" />
 </head>

@@ -41,10 +41,14 @@ const { Content } = await render(post);
     <header class="my-16">
       <h1
         class="text-3xl leading-tight font-header1 sm:text-6xl sm:leading-tight text-center"
+        transition:name="title"
       >
         {title}
       </h1>
-      <div class="mt-4 text-base text-center leading-normal">
+      <div
+        class="mt-4 text-base text-center leading-normal"
+        transition:name="date"
+      >
         <FormattedDate date={publishDate} />
         {
           updatedDate && (
