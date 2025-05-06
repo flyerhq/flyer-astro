@@ -4,12 +4,14 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 // import Pagination from "../../components/Pagination.astro";
 import PostPreview from "@components/PostPreview.astro";
+import { isProd } from "@helpers/utils";
 // import Subscribe from "../../components/Subscribe.astro";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   // const posts = (await getCollection("blog")).sort(sortItemsByDateDesc);
-  const posts = await getCollection("blog");
-  console.log(posts.length);
+  const posts = await getCollection("blog", ({ data }) => {
+    return isProd ? data.draft !== true : true;
+  });
   return paginate(posts, { pageSize: 4 });
 }
 
