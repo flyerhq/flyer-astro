@@ -34,6 +34,14 @@ While this won't cover every difference, understanding these core changes is the
 *   **`name`, `size`**: No longer required.
 *   **`uri` -> `source`**: Renamed to highlight that the video source can be varied (local, remote, etc.).
 
+### Audio Message Specific Changes
+
+*   **`name`**: Removed.
+*   **`mimeType`**: Removed.
+*   **`size`**: No longer required.
+*   **`duration`**: Now serialized as `int` in seconds (instead of milliseconds).
+*   **`uri` -> `source`**: Renamed to highlight that the audio source can be varied (local, remote, etc.).
+
 ## User Model Changes
 
 *   **`imageUri` -> `imageSource`**: Renamed to highlight that the image source can be varied (local, remote, base64 string, etc.).
