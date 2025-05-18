@@ -6,7 +6,7 @@ title: Migration from v1 🔄
 Flyer Chat v2 is a significant departure from v1. While this guide covers key breaking changes in models and the `Chat` widget, expect to refactor other areas of your implementation as well. Direct migration is not possible.
 :::
 
-:::info[Firebase Migration]
+:::tip[Firebase Migration]
 For additional insights into migrating your Firebase application with Flyer Chat v2, please refer to the discussion and resources available in this GitHub issue: [flyerhq/flutter_chat_ui#750](https://github.com/flyerhq/flutter_chat_ui/issues/750).
 :::
 

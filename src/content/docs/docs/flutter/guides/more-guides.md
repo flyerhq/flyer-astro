@@ -6,7 +6,6 @@ We are continuously working on expanding the documentation. If you have specific
 
 Future guides will include:
 
-* Implementing persistent storage with custom `ChatController` (e.g., Sembast, Hive)
 * Advanced message layouts using `ChatMessage` builders, group chats, etc.
 * Creating and integrating custom message types
 * Handling user typing indicators

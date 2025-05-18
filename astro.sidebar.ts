@@ -32,6 +32,14 @@ export const sidebar = [
     items: [
       // Each item here is one entry in the navigation menu.
       {
+        label: "Persisted Controller",
+        slug: "docs/flutter/guides/persisted-controller",
+      },
+      {
+        label: "Regular List Keyboard Handling",
+        slug: "docs/flutter/guides/regular-list-keyboard",
+      },
+      {
         label: "Status Indicators",
         slug: "docs/flutter/guides/status-indicators",
       },
