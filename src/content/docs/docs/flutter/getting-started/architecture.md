@@ -95,7 +95,7 @@ If you must use a regular list and want to avoid the initial scroll lag, here's 
 **6. Keyboard Handling:**
 
 *   **Reversed List:** The list is naturally anchored to the bottom. When the keyboard appears or disappears, the list content moves smoothly with it.
-*   **Regular List:** You will need to implement custom logic using a `ScrollController` to manually adjust the scroll position and push content up when the keyboard is shown, and back down when it's hidden, to prevent the input from obscuring messages. For this, please follow this guide: [Regular List Keyboard Handling](/docs/flutter/guides/regular-list-keyboard).
+*   **Regular List:** Keyboard handling is managed automatically. We listen to keyboard height and then animate the content when the keyboard is up. This process has a slight delay, so you'll see the keyboard report its full height before the content animates. This means it won't be as smooth as the reversed list.
 
 ## `cross_cache` for Image Caching
 
