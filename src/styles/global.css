@@ -6,20 +6,20 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 @plugin "@tailwindcss/typography";
 
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
 @import "@fontsource-variable/host-grotesk";
-@import "@fontsource-variable/inter";
-@import "@fontsource/ibm-plex-mono/400.css";
-@import "@fontsource/ibm-plex-mono/500.css";
 
 @utility container {
   margin-inline: auto;
   padding-inline: 12px;
+  max-width: 976px !important;
 }
 
 @theme inline {
-  --font-sans: "Inter Variable", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-header1: "Host Grotesk Variable", sans-serif;
+  --font-sans: "Geist Variable", sans-serif;
+  --font-mono: "Geist Mono Variable", monospace;
+  --font-header1: "Geist Variable", sans-serif;
   --font-body1: var(--font-sans);
   --font-body2: var(--font-mono);
 
@@ -27,6 +27,10 @@
   --color-text-primary: #272727;
   --color-text-on-primary: #ffffff;
   --color-surface: #f2f2f2;
+  --color-black: #151515;
+  --color-white: #ffffff;
+  --color-divider: #e3e3e3;
+  --color-dark-grey: #8e8e8e;
 
   --color-jonquil-50: #fdffe5;
   --color-jonquil-100: #f8ffc8;
