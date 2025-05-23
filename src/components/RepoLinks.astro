@@ -1,0 +1,24 @@
+---
+import { cn } from "@helpers/utils";
+import GithubButton from "./GithubButton.astro";
+import Link from "./Link.astro";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={cn("flex flex-row gap-8 justify-center items-center", className)}>
+  <div class="flex flex-row justify-center items-center gap-2">
+    <img src="icons/flutter.svg" class="h-5" />
+    <Link>Flutter</Link>
+    <GithubButton />
+  </div>
+  <div class="flex flex-row justify-center items-center gap-2">
+    <img src="icons/react.svg" class="h-5" />
+    <Link>React Native</Link>
+    <GithubButton />
+  </div>
+</div>
