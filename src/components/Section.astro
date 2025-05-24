@@ -1,0 +1,27 @@
+---
+import { cn } from "@helpers/utils";
+
+interface Props {
+  class?: string;
+  last?: boolean;
+  noPadding?: boolean;
+}
+
+const { class: className = "", last = false, noPadding = false } = Astro.props;
+---
+
+<section
+  class={cn(
+    "border border-divider p-16 container",
+    {
+      "border-b": last,
+      "border-b-0": !last,
+    },
+    {
+      "p-0": noPadding,
+    },
+    className,
+  )}
+>
+  <slot />
+</section>
