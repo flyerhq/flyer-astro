@@ -1,24 +1,31 @@
 ---
 // import Body1 from "./Body1.astro";
+import Body1 from "./Body1.astro";
 import Button from "./Button.astro";
 import Header1 from "./Header1.astro";
+import Kbd from "./Kbd.astro";
+import RepoLinks from "./RepoLinks.astro";
+import Section from "./Section.astro";
 ---
 
-<main class="flex flex-col items-center justify-center flex-1 container py-8">
+<Section class="flex flex-col items-center justify-center pt-32">
   <div class="flex flex-col md:items-center flex-1 justify-center w-full">
     <div class="md:w-[740px]">
       <Header1 class="text-left md:text-center">
-        Ship faster with a go&#8209;to chat SDK
+        Ship faster with a go&#8209;to chat SDK.
       </Header1>
     </div>
-    <!-- <div class="md:w-[540px] mt-8">
+    <div class="md:w-[540px] mt-6">
       <Body1 class="text-left md:text-center">
-        Focus on innovation instead of added complexity with a flexible chat
-        experience that scales across platforms.
+        Free and open-source chat SDK for Flutter and React Native. Build fast,
+        real-time apps and AI agents with a high-performance, customizable,
+        cross-platform UI.
       </Body1>
-    </div> -->
-    <Button href="/docs/flutter/introduction" class="w-full md:w-[400px] mt-10"
-      >Start building</Button
+    </div>
+    <Button href="/docs/flutter/introduction" class="mt-10 gap-2"
+      >Start building <Kbd class="bg-white/5 border-white/50 text-white">S</Kbd
+      ></Button
     >
+    <RepoLinks class="mt-20" />
   </div>
-</main>
+</Section>
