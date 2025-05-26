@@ -1,0 +1,23 @@
+---
+
+---
+
+<script is:inline>
+  const keys = {
+    c: "mailto:hello@flyerhq.com",
+    b: "/blog",
+    d: "/docs",
+    s: "/docs",
+  };
+  window.addEventListener("keydown", (event) => {
+    if (keys[event.key]) {
+      const action = keys[event.key];
+      event.preventDefault();
+      if (action.startsWith("mailto")) {
+        window.open(action);
+      } else {
+        window.location.href = action;
+      }
+    }
+  });
+</script>

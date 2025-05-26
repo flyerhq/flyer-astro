@@ -2,6 +2,7 @@
 import Head from "@components/Head.astro";
 import Header from "@components/Header.astro";
 import Footer from "../components/Footer.astro";
+import KbdListeners from "@components/KbdListeners.astro";
 
 import "@styles/global.css";
 
@@ -18,5 +19,6 @@ interface Props {
       <slot />
     </div>
     <Footer />
+    <KbdListeners />
   </body>
 </html>
