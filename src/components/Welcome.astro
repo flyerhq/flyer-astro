@@ -6,10 +6,12 @@ import Header1 from "./Header1.astro";
 import Kbd from "./Kbd.astro";
 import RepoLinks from "./RepoLinks.astro";
 import Section from "./Section.astro";
+import Spline from "./Spline.astro";
 ---
 
-<Section class="flex flex-col items-center justify-center pt-32">
-  <div class="flex flex-col md:items-center flex-1 justify-center w-full">
+<Section class="flex flex-col items-center justify-center pt-32 relative">
+  <Spline />
+  <div class="flex flex-col md:items-center flex-1 justify-center w-full z-10">
     <div class="md:w-[740px]">
       <Header1 class="text-left md:text-center">
         Ship faster with a go&#8209;to chat SDK.
