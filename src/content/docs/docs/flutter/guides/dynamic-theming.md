@@ -78,7 +78,10 @@ This overrides the theme's default background for sent messages without affectin
 Chat(
   // ...
   builders: Builders(
-    textMessageBuilder: (context, message, index) {
+    textMessageBuilder: (context, message, index, {
+      required bool isSentByMe,
+      MessageGroupStatus? groupStatus,
+    }) {
       return SimpleTextMessage(
         message: message,
         index: index,

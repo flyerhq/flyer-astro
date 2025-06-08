@@ -73,7 +73,10 @@ import 'package:flyer_chat_text_message/flyer_chat_text_message.dart';
 Chat(
   // ...
   builders: Builders(
-    textMessageBuilder: (context, message, index) {
+    textMessageBuilder: (context, message, index, {
+      required bool isSentByMe,
+      MessageGroupStatus? groupStatus,
+    }) {
       return SimpleTextMessage( // or FlyerChatTextMessage
         message: message,
         index: index,
@@ -94,7 +97,10 @@ Use other builders like `imageMessageBuilder`, `fileMessageBuilder`, etc. to cus
 Chat(
   // ...
   builders: Builders(
-    textMessageBuilder: (context, message, index) {
+    textMessageBuilder: (context, message, index, {
+      required bool isSentByMe,
+      MessageGroupStatus? groupStatus,
+    }) {
       return SimpleTextMessage( // or FlyerChatTextMessage
         message: message,
         index: index,
@@ -118,16 +124,17 @@ Chat(
       index,
       animation,
       child, {
-      groupStatus,
-      isRemoved,
+      bool? isRemoved,
+      required bool isSentByMe,
+      MessageGroupStatus? groupStatus,
     }) {
       final currentStatus = message.status;
       return ChatMessage(
         message: message,
         index: index,
         animation: animation,
-        groupStatus: groupStatus,
         isRemoved: isRemoved,
+        groupStatus: groupStatus,
         // Here we add a widget that will be displayed at the end of the message bubble.
         trailingWidget:
           currentStatus != null
@@ -150,7 +157,10 @@ Chat(
       );
     },
     // Remember to hide the default status indicator inside the text message bubble!
-    textMessageBuilder: (context, message, index) {
+    textMessageBuilder: (context, message, index, {
+      required bool isSentByMe,
+      MessageGroupStatus? groupStatus,
+    }) {
       return SimpleTextMessage( // or FlyerChatTextMessage
         message: message,
         index: index,
@@ -158,7 +168,10 @@ Chat(
       );
     },
     // Hide statuses for other message widgets if needed.
-    // imageMessageBuilder: (context, message, index) {
+    // imageMessageBuilder: (context, message, index, {
+    //   required bool isSentByMe,
+    //   MessageGroupStatus? groupStatus,
+    // }) {
     //   return FlyerChatImageMessage(
     //     message: message,
     //     index: index,
