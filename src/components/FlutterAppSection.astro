@@ -2,6 +2,24 @@
 import Section from "./Section.astro";
 ---
 
-<Section noPadding class="h-200">
-  <iframe class="w-full h-full" src="/app"></iframe>
+<Section noPadding class="h-200 z-10">
+  <iframe id="example" class="w-full h-full" src="/app" tabindex="-1"></iframe>
 </Section>
+
+<script is:inline>
+  const iframe = document.getElementById("example");
+
+  iframe.addEventListener("load", () => {
+    // Delay might be needed for some browsers
+    setTimeout(() => {
+      window.focus(); // Refocus main window
+    }, 500);
+  });
+
+  iframe.addEventListener("focus", () => {
+    // Refocus main window when iframe loses focus
+    setTimeout(() => {
+      window.focus(); // Refocus main window
+    }, 500);
+  });
+</script>

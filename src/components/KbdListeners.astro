@@ -6,10 +6,10 @@
   const keys = {
     c: "mailto:hello@flyerhq.com",
     b: "/blog",
-    d: "/docs",
-    s: "/docs",
+    d: "/docs/flutter/introduction",
+    s: "/docs/flutter/introduction",
   };
-  window.addEventListener("keydown", (event) => {
+  document.addEventListener("keydown", (event) => {
     if (keys[event.key]) {
       const action = keys[event.key];
       event.preventDefault();
