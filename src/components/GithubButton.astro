@@ -4,8 +4,9 @@ import { cn } from "@helpers/utils";
 interface Props {
   href?: string;
   class?: string;
+  id: string;
 }
-const { href, class: className } = Astro.props;
+const { href, class: className, id } = Astro.props;
 ---
 
 <a
@@ -13,10 +14,10 @@ const { href, class: className } = Astro.props;
   target="_blank"
   rel="noopener noreferrer"
   class={cn(
-    "flex flex-row gap-2 items-center justify-center h-8 px-3 bg-white border border-divider rounded-sm text-sm font-medium text-black font-mono",
+    "flex flex-row gap-2 items-center justify-center h-8 px-3 bg-white border border-divider rounded-sm text-sm font-medium text-black font-mono cursor-pointer no-underline",
     className,
   )}
 >
   <img src="/icons/github.svg" alt="GitHub Icon" class="h-5" />
-  1.8k
+  <span id={id}>Loading...</span>
 </a>
