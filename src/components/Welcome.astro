@@ -13,7 +13,9 @@ import Spline from "./Spline.astro";
   class="flex flex-col items-center justify-center pt-32 relative overflow-hidden"
 >
   <Spline />
-  <div class="flex flex-col md:items-center flex-1 justify-center w-full z-10">
+  <div
+    class="flex flex-col md:items-center flex-1 justify-center w-full z-10 pointer-events-none"
+  >
     <div class="md:w-[740px]">
       <Header1 class="text-left md:text-center">
         Ship faster with a go&#8209;to chat SDK.
@@ -26,10 +28,12 @@ import Spline from "./Spline.astro";
         cross-platform UI.
       </Body1>
     </div>
-    <Button href="/docs/flutter/introduction" class="mt-10 gap-2"
+    <Button
+      href="/docs/flutter/introduction"
+      class="mt-10 gap-2 pointer-events-auto"
       >Start building <Kbd class="bg-white/5 border-white/50 text-white">S</Kbd
       ></Button
     >
-    <RepoLinks class="mt-20" />
+    <RepoLinks class="mt-20 pointer-events-auto" />
   </div>
 </Section>
