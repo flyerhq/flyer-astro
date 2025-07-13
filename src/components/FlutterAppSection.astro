@@ -3,7 +3,11 @@ import Section from "./Section.astro";
 ---
 
 <Section noPadding class="h-200 z-10">
-  <iframe id="example" class="w-full h-full" src="/app" tabindex="-1"></iframe>
+  <iframe
+    id="example"
+    class="w-full h-full opacity-0 duration-300"
+    src="/app"
+    tabindex="-1"></iframe>
 </Section>
 
 <script is:inline>
@@ -13,6 +17,8 @@ import Section from "./Section.astro";
     // Delay might be needed for some browsers
     setTimeout(() => {
       window.focus(); // Refocus main window
+      iframe.classList.remove("opacity-0");
+      iframe.classList.add("opacity-100");
     }, 500);
   });
 
