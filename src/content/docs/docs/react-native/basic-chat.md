@@ -1,4 +1,6 @@
-# Create a Chat
+---
+title: Create a Chat
+---
 
 With the building blocks provided by this repository you can put together a complete chat interface. The easiest way is to use the `Chat` component from `@flyerhq/react-native-chat-ui` and pass it your message data and callbacks.
 

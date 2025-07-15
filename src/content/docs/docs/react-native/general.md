@@ -1,4 +1,6 @@
-# General
+---
+title: General
+---
 
 This monorepo provides a modular chat UI implementation built entirely with TypeScript. The project is divided into several packages:
 

@@ -1,4 +1,6 @@
-# Building Your Own Components
+---
+title: Building Your Own Components
+---
 
 The primitives provided by `@flyerhq/react-native-chat-primitives` expose all
 of the structure and accessibility features required for a chat interface, but
