@@ -1,0 +1,31 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section class="h-[1280px] [@media(min-width:937px)]:h-[800px] z-10">
+  <iframe
+    id="example"
+    class="w-full opacity-0 duration-300 h-full"
+    src="/app"
+    tabindex="-1"></iframe>
+</Section>
+
+<script is:inline>
+  const iframe = document.getElementById("example");
+
+  iframe.addEventListener("load", () => {
+    // Delay might be needed for some browsers
+    setTimeout(() => {
+      window.focus(); // Refocus main window
+      iframe.classList.remove("opacity-0");
+      iframe.classList.add("opacity-100");
+    }, 500);
+  });
+
+  iframe.addEventListener("focus", () => {
+    // Refocus main window when iframe loses focus
+    setTimeout(() => {
+      window.focus(); // Refocus main window
+    }, 500);
+  });
+</script>

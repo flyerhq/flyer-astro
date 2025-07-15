@@ -1,0 +1,79 @@
+---
+import { cn } from "@helpers/utils";
+import GithubButton from "./GithubButton.astro";
+import Link from "./Link.astro";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={cn("flex flex-row gap-8 justify-center items-center", className)}>
+  <div class="flex flex-row justify-center items-center gap-2">
+    <img src="icons/flutter.svg" class="h-5" />
+    <Link href="/docs/flutter/introduction">Flutter</Link>
+    <GithubButton
+      id="flutter-start"
+      href="https://github.com/flyerhq/flutter_chat_ui/"
+    />
+  </div>
+  <div class="flex flex-row justify-center items-center gap-2">
+    <img src="icons/react.svg" class="h-5" />
+    <Link>React Native</Link>
+    <GithubButton
+      id="react-native-start"
+      href="https://github.com/flyerhq/react-native-chat-ui"
+    />
+  </div>
+</div>
+
+<script type="module">
+  async function fetchStars() {
+    const numberFormatter = new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      compactDisplay: "short",
+    });
+
+    const fetchWithCache = async (url) => {
+      // Use a cache key based on the URL
+      const cacheKey = `github-stars-cache-${url}`;
+      const cacheExpiryKey = `${cacheKey}-expiry`;
+      const now = Date.now();
+      const oneHour = 60 * 60 * 1000;
+
+      // Check if cached and not expired
+      const cached = localStorage.getItem(cacheKey);
+      const expiry = localStorage.getItem(cacheExpiryKey);
+
+      if (cached && expiry && now < Number(expiry)) {
+        return JSON.parse(cached);
+      }
+
+      // Fetch with cache-control header to encourage HTTP caching
+      const response = await fetch(url);
+      const data = await response.json();
+
+      // Store in localStorage with expiry
+      localStorage.setItem(cacheKey, JSON.stringify(data));
+      localStorage.setItem(cacheExpiryKey, (now + oneHour).toString());
+
+      return data;
+    };
+
+    const [flutterData, reactNativeData] = await Promise.all([
+      fetchWithCache("https://api.github.com/repos/flyerhq/flutter_chat_ui"),
+      fetchWithCache(
+        "https://api.github.com/repos/flyerhq/react-native-chat-ui",
+      ),
+    ]);
+
+    document.getElementById("flutter-start").innerText =
+      `${numberFormatter.format(flutterData.stargazers_count)}`;
+    document.getElementById("react-native-start").innerText =
+      `${numberFormatter.format(reactNativeData.stargazers_count)}`;
+  }
+
+  fetchStars();
+</script>

@@ -1,0 +1,17 @@
+---
+import { cn } from "@helpers/utils";
+
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<kbd
+  class={cn(
+    "bg-white border border-divider rounded-sm text-black px-1.5",
+    className,
+  )}
+>
+  <slot />
+</kbd>

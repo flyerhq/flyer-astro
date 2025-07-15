@@ -1,16 +1,19 @@
 ---
+import Kbd from "./Kbd.astro";
 import Link from "./Link.astro";
+import LinkWithKbd from "./LinkWithKbd.astro";
 import Logo from "./Logo.astro";
 ---
 
-<div class="sticky top-0 backdrop-blur-md z-30">
+<div class="sticky top-0 backdrop-blur-lg z-30 bg-surface/75">
   <header
-    class="flex flex-row items-center justify-between mt-4 md:mt-6 lg:mt-8 container h-12"
+    class="flex flex-row items-center justify-between container h-12 my-8"
   >
     <Logo />
-    <nav class="flex flex-row gap-10">
-      <Link href="/docs/flutter/introduction">docs</Link>
-      <Link href="/blog">blog</Link>
+    <nav class="flex flex-row gap-6 items-center">
+      <LinkWithKbd href="/docs/flutter/introduction" kbd="D">docs</LinkWithKbd>
+      <LinkWithKbd href="/blog" kbd="B"> blog </LinkWithKbd>
+      <LinkWithKbd href="mailto:hello@flyer.chat" kbd="C">contact</LinkWithKbd>
       <Link target="_blank" href="https://github.com/flyerhq/flutter_chat_ui">
         github
       </Link>

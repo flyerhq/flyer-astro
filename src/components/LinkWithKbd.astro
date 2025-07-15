@@ -1,0 +1,21 @@
+---
+import { cn } from "@helpers/utils";
+import Link from "./Link.astro";
+import Kbd from "./Kbd.astro";
+
+interface Props {
+  kbd: string;
+  href: string;
+  class?: string;
+  [propName: string]: any;
+}
+
+const { href, class: className, kbd, ...props } = Astro.props;
+---
+
+<div class={cn("flex items-center justify-center gap-2", className)}>
+  <Link {href} {...props}>
+    <slot />
+  </Link>
+  <Kbd class="hidden lg:inline-block">{kbd}</Kbd>
+</div>

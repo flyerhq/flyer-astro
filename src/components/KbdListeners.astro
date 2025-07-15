@@ -1,0 +1,23 @@
+---
+
+---
+
+<script is:inline>
+  const keys = {
+    c: "mailto:hello@flyer.chat",
+    b: "/blog",
+    d: "/docs/flutter/introduction",
+    s: "/docs/flutter/introduction",
+  };
+  document.addEventListener("keydown", (event) => {
+    if (keys[event.key]) {
+      const action = keys[event.key];
+      event.preventDefault();
+      if (action.startsWith("mailto")) {
+        window.open(action);
+      } else {
+        window.location.href = action;
+      }
+    }
+  });
+</script>

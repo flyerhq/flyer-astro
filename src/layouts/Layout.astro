@@ -1,22 +1,24 @@
 ---
 import Head from "@components/Head.astro";
-import Navbar from "@components/Navbar.astro";
+import Header from "@components/Header.astro";
 import Footer from "../components/Footer.astro";
+import KbdListeners from "@components/KbdListeners.astro";
 
 import "@styles/global.css";
 
-type Props = { children: any; showIsCookingBanner?: boolean };
-
-const { showIsCookingBanner = false } = Astro.props;
+interface Props {
+  children: any;
+}
 ---
 
 <html lang="en">
   <Head />
   <body class="flex flex-col h-screen bg-surface">
-    <Navbar showIsCookingBanner={showIsCookingBanner} />
+    <Header />
     <div class="flex flex-col grow container">
       <slot />
     </div>
     <Footer />
+    <KbdListeners />
   </body>
 </html>
