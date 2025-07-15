@@ -13,13 +13,13 @@ export const options: StarlightUserConfig = {
   plugins: [
     starlightLinksValidatorPlugin(),
     starlightLlmsTxt(),
-    starlightScrollToTop({
-      position: "right",
-      showTooltip: true,
-      tooltipText: "Scroll to top",
-      smoothScroll: true,
-      threshold: 30,
-    }),
+    // starlightScrollToTop({
+    //   position: "right",
+    //   showTooltip: true,
+    //   tooltipText: "Scroll to top",
+    //   smoothScroll: true,
+    //   threshold: 30,
+    // }),
     starlightSidebarTopics([
       {
         label: "Flutter",
