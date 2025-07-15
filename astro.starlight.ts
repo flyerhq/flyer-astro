@@ -2,12 +2,23 @@ import type { StarlightUserConfig } from "@astrojs/starlight/types";
 import { sidebar } from "./astro.sidebar";
 import starlightLinksValidatorPlugin from "starlight-links-validator";
 import starlightLlmsTxt from "starlight-llms-txt";
+import starlightScrollToTop from "starlight-scroll-to-top";
 
 const description =
   "Open-source chat SDK for Flutter and React Native. Build fast, real-time apps and AI agents with a high-performance, customizable, cross-platform UI.";
 
 export const options: StarlightUserConfig = {
-  plugins: [starlightLinksValidatorPlugin(), starlightLlmsTxt()],
+  plugins: [
+    starlightLinksValidatorPlugin(),
+    starlightLlmsTxt(),
+    starlightScrollToTop({
+      position: 'right',
+      showTooltip: true,
+      tooltipText: 'Scroll to top',
+      smoothScroll: true,
+      threshold: 30,
+    }),
+  ],
   title: "Flyer Chat",
   customCss: [
     // Path to your Tailwind base styles:
