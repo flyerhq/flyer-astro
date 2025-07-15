@@ -3,7 +3,7 @@ import { sidebar } from "./astro.sidebar";
 import { reactNativeSidebar } from "./astro.sidebar.react-native";
 import starlightLinksValidatorPlugin from "starlight-links-validator";
 import starlightLlmsTxt from "starlight-llms-txt";
-import starlightScrollToTop from "starlight-scroll-to-top";
+// import starlightScrollToTop from "starlight-scroll-to-top";
 import starlightSidebarTopics from "starlight-sidebar-topics";
 
 const description =
