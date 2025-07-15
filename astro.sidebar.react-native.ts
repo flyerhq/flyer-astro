@@ -6,6 +6,15 @@ export const reactNativeSidebar = [
     slug: "docs/react-native/introduction",
   },
   {
+    label: "Getting Started",
+    items: [
+      {
+        label: "Installation",
+        slug: "docs/react-native/getting-started/installation",
+      },
+    ],
+  },
+  {
     label: "General",
     slug: "docs/react-native/general",
   },
