@@ -2,10 +2,10 @@
 import Section from "./Section.astro";
 ---
 
-<Section noPadding class="h-200 z-10">
+<Section class="h-[1280px] [@media(min-width:937px)]:h-[800px] z-10">
   <iframe
     id="example"
-    class="w-full h-full opacity-0 duration-300"
+    class="w-full opacity-0 duration-300 h-full"
     src="/app"
     tabindex="-1"></iframe>
 </Section>

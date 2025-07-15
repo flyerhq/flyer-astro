@@ -17,5 +17,5 @@ const { href, class: className, kbd, ...props } = Astro.props;
   <Link {href} {...props}>
     <slot />
   </Link>
-  <Kbd>{kbd}</Kbd>
+  <Kbd class="hidden lg:inline-block">{kbd}</Kbd>
 </div>
