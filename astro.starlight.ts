@@ -29,7 +29,7 @@ export const options: StarlightUserConfig = {
       },
       {
         label: "React Native",
-        link: "/docs/react-native/introduction/",
+        link: "/docs/react-native/wip/",
         // icon: "seti:react",
         items: reactNativeSidebar,
       },
