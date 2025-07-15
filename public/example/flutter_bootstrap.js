@@ -410,6 +410,6 @@ _flutter.buildConfig = {
 
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "871183683",
+    serviceWorkerVersion: "1540433289",
   },
 });
