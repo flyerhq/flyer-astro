@@ -1,22 +1,37 @@
 ---
-// import Kbd from "./Kbd.astro";
+import IconButton from "./IconButton.astro";
+import Kbd from "./Kbd.astro";
 import Link from "./Link.astro";
 import LinkWithKbd from "./LinkWithKbd.astro";
 import Logo from "./Logo.astro";
 ---
 
-<div class="sticky top-0 backdrop-blur-lg z-30 bg-surface/75">
+<div
+  class="sticky top-0 backdrop-blur-lg z-30 bg-surface/75 border-b-divider border-b"
+>
   <header
-    class="flex flex-row items-center justify-between container h-12 my-8"
+    class="flex flex-row items-center justify-between header-container h-12 my-8"
   >
     <Logo />
-    <nav class="flex flex-row gap-6 items-center">
-      <LinkWithKbd href="/docs/flutter/introduction" kbd="D">docs</LinkWithKbd>
-      <LinkWithKbd href="/blog" kbd="B"> blog </LinkWithKbd>
-      <LinkWithKbd href="mailto:hello@flyer.chat" kbd="C">contact</LinkWithKbd>
-      <Link target="_blank" href="https://github.com/flyerhq/flutter_chat_ui">
-        github
-      </Link>
+    <nav class="flex flex-row gap-6 items-center flex-1 ml-16">
+      <LinkWithKbd href="/docs/flutter/introduction" kbd="D">Docs</LinkWithKbd>
+      <LinkWithKbd href="/blog" kbd="B">Blog</LinkWithKbd>
+    </nav>
+    <nav class="flex flex-row gap-2 items-center">
+      <IconButton
+        href="mailto:hello@flyer.chat"
+        type="secondary"
+        class="text-black"
+        >Contact <Kbd>C</Kbd>
+        <!-- <Link target="_blank"> Github </Link> -->
+
+        <IconButton
+          href="https://github.com/flyerhq/flutter_chat_ui"
+          type="secondary"
+        >
+          <img src="/icons/github.svg" alt="GitHub Icon" class="h-5" />
+        </IconButton>
+      </IconButton>
     </nav>
   </header>
 </div>

@@ -16,6 +16,12 @@
   max-width: 976px !important;
 }
 
+.header-container {
+  margin-inline: auto;
+  padding-inline: 12px;
+  max-width: 1328px !important;
+}
+
 @theme inline {
   --font-sans: "Geist Variable", sans-serif;
   --font-mono: "Geist Mono Variable", monospace;

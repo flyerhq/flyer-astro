@@ -2,12 +2,18 @@
 import { cn } from "@helpers/utils";
 
 interface Props {
+  first?: boolean;
   class?: string;
   last?: boolean;
   noPadding?: boolean;
 }
 
-const { class: className = "", last = false, noPadding = false } = Astro.props;
+const {
+  class: className = "",
+  last = false,
+  first = false,
+  noPadding = false,
+} = Astro.props;
 ---
 
 <section
@@ -16,6 +22,10 @@ const { class: className = "", last = false, noPadding = false } = Astro.props;
     {
       "border-b": last,
       "border-b-0": !last,
+    },
+    {
+      "border-t-0": first,
+      "border-t": !first,
     },
     {
       "p-0": noPadding,

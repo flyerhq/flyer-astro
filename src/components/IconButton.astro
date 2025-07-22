@@ -14,7 +14,7 @@ const { class: className, href, type = "primary", ...props } = Astro.props;
 <a
   href={href}
   class={cn(
-    "inline-flex font-mono text-[16px] leading-tight items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-12 px-4 py-2 no-underline",
+    "inline-flex font-mono text-[16px] leading-tight items-center justify-center gap-2 whitespace-nowrap rounded-[8px] text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 no-underline p-3",
     {
       "ring-offset-background bg-text-primary text-text-on-primary hover:bg-text-primary/90":
         type === "primary",
