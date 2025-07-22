@@ -1,17 +1,27 @@
-# Starlight Starter Kit: Basics
+# Flyer Chat Documentation
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```
-npm create astro@latest -- --template starlight
-```
+This is the official documentation website for **Flyer Chat**, an open-source chat UI SDK for Flutter and React Native applications. The site provides comprehensive guides, API documentation, and examples for building fast, real-time chat interfaces and AI agents.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+## About Flyer Chat
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Flyer Chat is a high-performance, customizable, cross-platform chat SDK designed for:
+
+- **Real-time messaging applications**
+- **AI assistants and LLM-based chatbots**
+- **Customer support platforms**
+- **Community chat features**
+
+### Key Features
+
+- 🔄 **Backend-agnostic**: Connect to any backend service
+- 🧬 **Adaptable**: Perfect for messengers, AI agents, and support platforms
+- 🎨 **Highly Customizable**: Extensive theme options and builder functions
+- 🧩 **Modular**: Pick and choose the features you need
+- ⚡ **Performance Optimized**: Built for speed and smooth animations
+- 🌐 **Cross-Platform**: Supports iOS, Android, Web, macOS, Windows, and Linux
+- 📜 **Open Source**: Free to use under the Apache 2.0 License
 
 ## 🚀 Project Structure
 
