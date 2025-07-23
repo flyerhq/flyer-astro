@@ -43,4 +43,19 @@ export const sidebar = [
       { label: "More Guides", slug: "docs/flutter/guides/more-guides" },
     ],
   },
+  {
+    label: "Layout",
+    items: [
+      {
+        label: "Understanding Layout",
+        slug: "docs/flutter/layout/understanding-layout",
+      },
+ 
+      { label: "Dynamic Theming", slug: "docs/flutter/guides/dynamic-theming" },
+      { label: "Add Avatars", slug: "docs/flutter/guides/add-avatars" },
+      { label: "Add Usernames", slug: "docs/flutter/guides/add-usernames" },
+      { label: "Add Date Separators", slug: "docs/flutter/guides/add-date-separators" },
+      { label: "Add Reactions", slug: "docs/flutter/guides/add-reactions" },
+    ],
+  },
 ] satisfies StarlightUserConfig["sidebar"];
