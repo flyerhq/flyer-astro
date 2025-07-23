@@ -55,6 +55,7 @@ export const sidebar = [
       { label: "Add Avatars", slug: "docs/flutter/guides/add-avatars" },
       { label: "Add Usernames", slug: "docs/flutter/guides/add-usernames" },
       { label: "Add Date Separators", slug: "docs/flutter/guides/add-date-separators" },
+      { label: "Add Reactions", slug: "docs/flutter/guides/add-reactions" },
     ],
   },
 ] satisfies StarlightUserConfig["sidebar"];
