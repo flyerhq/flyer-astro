@@ -19,14 +19,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chat_core/flutter_chat_core.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 
-class MyChat extends StatefulWidget {
-  const MyChat({super.key});
+class Basic extends StatefulWidget {
+  const Basic({super.key});
 
   @override
-  MyChatState createState() => MyChatState();
+  BasicState createState() => BasicState();
 }
 
-class MyChatState extends State<MyChat> {
+class BasicState extends State<Basic> {
   final _chatController = InMemoryChatController();
 
   @override
@@ -44,7 +44,7 @@ class MyChatState extends State<MyChat> {
         onMessageSend: (text) {
           _chatController.insertMessage(
             TextMessage(
-              // Better to use UUID or similar for the ID - IDs must be unique.
+              // Better to use UUID or similar for the ID - IDs must be unique
               id: '${Random().nextInt(1000) + 1}',
               authorId: 'user1',
               createdAt: DateTime.now().toUtc(),
@@ -53,7 +53,7 @@ class MyChatState extends State<MyChat> {
           );
         },
         resolveUser: (UserID id) async {
-          return User(id: id, firstName: 'John', lastName: 'Doe');
+          return User(id: id, name: 'John Doe');
         },
       ),
     );
